@@ -1,4 +1,5 @@
 const Student = require("./Student");
+const studentData = require("./json/studentData");
 
 // let student1 = new Student("Vineeth", 1);
 // let student2 = new Student("Vineeths", 1);
@@ -10,14 +11,9 @@ const Student = require("./Student");
 let students = [];
 
 function CollegeManagementSystem() {
-	noOfStudentsToBeEntered = 5;
-	while (noOfStudentsToBeEntered != 0) {
-		students.push(new Student("zayn", 2));
-
-		--noOfStudentsToBeEntered;
-	}
+	studentData.map((e) => students.push(new Student(e.name, e.gradeYear)));
 }
 
 CollegeManagementSystem();
-// console.log(students[0].name);
+
 console.log(students);
