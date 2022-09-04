@@ -26,4 +26,4 @@ function Teacher(name, branch) {
 	};
 }
 
-module.exports = { Teacher };
+module.exports = Teacher;

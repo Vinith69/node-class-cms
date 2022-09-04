@@ -17,6 +17,8 @@ function CollegeManagementSystem() {
 	studentData.map((e) =>
 		students.push(new Student(e.name, e.gradeYear, e.branch))
 	);
+
+	teacherData.map((e) => teachers.push(new Teacher(e.name, e.branch)));
 	// let student1 = new Student("Vineeth", 1, "EC");
 	// student1.payFees(1600);
 	// console.log(student1.getStudentInfo());
@@ -24,5 +26,6 @@ function CollegeManagementSystem() {
 
 CollegeManagementSystem();
 students[1].payFees(800);
+teachers[0].setSalary(8000);
 console.log(students[1].getStudentInfo());
-console.log(students[0].getStudentInfo());
+console.log(teachers[0].getTeacherInfo());
