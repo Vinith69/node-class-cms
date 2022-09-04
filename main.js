@@ -22,6 +22,13 @@ function CollegeManagementSystem() {
 	// let student1 = new Student("Vineeth", 1, "EC");
 	// student1.payFees(1600);
 	// console.log(student1.getStudentInfo());
+
+	this.studentPaymentCounter = function (usn, feesToPay) {
+		let filteredIndex = students.findIndex((e) => e.usn == usn);
+		students[filteredIndex].payFees(feesToPay);
+	};
+
+	this.studentPaymentCounter("11001", 100);
 }
 
 CollegeManagementSystem();
