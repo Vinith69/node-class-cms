@@ -1,14 +1,17 @@
 [
 	{
 		"name": "Vineeth",
-		"gradeYear": 1
+		"gradeYear": 1,
+		"branch": "CSE"
 	},
 	{
 		"name": "Preetham",
+		"branch": "CSE",
 		"gradeYear": 1
 	},
 	{
 		"name": "Sandy",
+		"branch": "CSE",
 		"gradeYear": 1
 	}
 ]

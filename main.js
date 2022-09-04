@@ -1,5 +1,7 @@
 const Student = require("./Student");
+const Teacher = require("./Teacher");
 const studentData = require("./json/studentData");
+const teacherData = require("./json/teacherData");
 
 // let student1 = new Student("Vineeth", 1);
 // let student2 = new Student("Vineeths", 1);
@@ -8,12 +10,19 @@ const studentData = require("./json/studentData");
 // console.log(student1.getStudentInfo());
 // console.log(student2.getStudentInfo());
 
-let students = [];
+let students = [],
+	teachers = [];
 
 function CollegeManagementSystem() {
-	studentData.map((e) => students.push(new Student(e.name, e.gradeYear)));
+	studentData.map((e) =>
+		students.push(new Student(e.name, e.gradeYear, e.branch))
+	);
+	// let student1 = new Student("Vineeth", 1, "EC");
+	// student1.payFees(1600);
+	// console.log(student1.getStudentInfo());
 }
 
 CollegeManagementSystem();
-
-console.log(students);
+students[1].payFees(800);
+console.log(students[1].getStudentInfo());
+console.log(students[0].getStudentInfo());
