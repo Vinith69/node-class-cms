@@ -2,6 +2,7 @@ const Student = require("./Student");
 const Teacher = require("./Teacher");
 const studentData = require("./json/studentData");
 const teacherData = require("./json/teacherData");
+const coursesData = require("./json/courses");
 
 // let student1 = new Student("Vineeth", 1);
 // let student2 = new Student("Vineeths", 1);
@@ -29,6 +30,23 @@ function CollegeManagementSystem() {
 	};
 
 	this.studentPaymentCounter("11001", 100);
+
+	this.filterCourse = function (gradeYear, branch) {
+		let filteredCourse = coursesData.filter(
+			(e) => e.branch == branch && e.gradeYear == gradeYear
+		);
+		return filteredCourse;
+	};
+
+	this.assignCourseToStudents = function (gradeYear, branch) {
+		let filteredCourse = this.filterCourse(gradeYear, branch)[0].subjects;
+		students.map((e) => {
+			e.gradeYear == gradeYear &&
+				e.branch == branch &&
+				(e.course = filteredCourse);
+		});
+	};
+	this.assignCourseToStudents(1, "CSE");
 }
 
 CollegeManagementSystem();

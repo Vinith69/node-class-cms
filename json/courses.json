@@ -1,0 +1,16 @@
+[
+	{
+		"branch": "CSE",
+		"gradeYear": 1,
+		"subjects": [
+			{
+				"courseCode": "cseMath101",
+				"subject": "Math"
+			},
+			{
+				"courseCode": "cseChemistry101",
+				"subject": "Chemistry"
+			}
+		]
+	}
+]

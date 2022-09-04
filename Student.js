@@ -7,6 +7,7 @@ function Student(name, gradeYear, branch) {
 	this.gradeYear = gradeYear;
 	this.usn = 0;
 	this.remainingFees = parseInt(fees);
+	this.course = "unassigned";
 
 	this.generateId = function () {
 		this.usn = this.gradeYear + "" + id;
@@ -32,6 +33,7 @@ function Student(name, gradeYear, branch) {
 			gradeYear: this.gradeYear,
 			collegeFee: fees,
 			feeToBePaid: this.remainingFees,
+			course: this.course,
 		};
 	};
 }
